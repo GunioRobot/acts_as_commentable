@@ -1,10 +1,8 @@
 module ActsAsCommentable
   module Comment
-    def self.included(base)  
-      base.class_eval <<-END
-        belongs_to :commentable, :polymorphic => true
-      END
-      base.extend ClassMethods
+    def self.included(model_class)  
+      model_class.belongs_to :commentable, :polymorphic => true
+      model_class.extend ClassMethods
     end
     
     module ClassMethods # TODO
