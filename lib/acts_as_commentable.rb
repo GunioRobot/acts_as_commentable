@@ -1,2 +1,2 @@
-require 'commentable_methods'
-require 'comment_methods'
+require 'acts_as_commentable/comment'
+require 'acts_as_commentable/commentable'

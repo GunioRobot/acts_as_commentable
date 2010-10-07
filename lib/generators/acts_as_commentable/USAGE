@@ -1,0 +1,1 @@
+`rails g acts_as_commentable:install`
