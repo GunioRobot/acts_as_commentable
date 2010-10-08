@@ -1,10 +1,9 @@
 require 'active_record'
 
 module ActsAsCommentable
-  module Commentable #:nodoc:
-
-    def self.included(base)
-      base.extend SingletonMethods  
+  module Commentable
+    def self.included(model_class)
+      model_class.extend SingletonMethods  
     end
 
     module SingletonMethods
