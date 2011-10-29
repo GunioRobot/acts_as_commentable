@@ -3,7 +3,7 @@ require 'active_record'
 module ActsAsCommentable
   module Commentable
     def self.included(model_class)
-      model_class.extend SingletonMethods  
+      model_class.extend SingletonMethods
     end
 
     module SingletonMethods
@@ -12,11 +12,11 @@ module ActsAsCommentable
         include ActsAsCommentable::Commentable::InstanceMethods
         extend ActsAsCommentable::Commentable::ClassMethods
       end
-    end   
-    
+    end
+
     module ClassMethods # TODO
     end
-    
+
     module InstanceMethods # TODO
     end
   end

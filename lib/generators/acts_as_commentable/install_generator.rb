@@ -7,8 +7,8 @@ module ActsAsCommentable
 
       source_root File.join(File.dirname(__FILE__), 'templates')
 
-      desc "Generates migration and model files for Comment" 
-      
+      desc "Generates migration and model files for Comment"
+
       def self.next_migration_number(path)
         Time.now.utc.strftime("%Y%m%d%H%M%S")
       end
@@ -19,7 +19,7 @@ module ActsAsCommentable
 
       def create_model_file
         template "comment.rb", "app/models/comment.rb"
-      end  
-    end  
+      end
+    end
   end
 end
